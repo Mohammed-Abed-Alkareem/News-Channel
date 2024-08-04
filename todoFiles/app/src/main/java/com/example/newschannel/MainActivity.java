@@ -41,9 +41,5 @@ public class MainActivity extends AppCompatActivity {
         newsTextView.startAnimation(newsAnimation);
         hashtag.startAnimation(hashtagAnimation);
 
-        // set timer each 6 seconds stRT ANIMATION AGAIN and make image invisible
-
-
-
     }
 }

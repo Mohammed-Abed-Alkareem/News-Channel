@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/background"
-    >
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/dolphin"
+        android:layout_width="140dp"
+        android:layout_height="195dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="136dp"
+        app:srcCompat="@drawable/dolphin" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/sea" />
 
     <ImageView
         android:id="@+id/logo"
@@ -15,8 +30,8 @@
         android:layout_height="92dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         app:srcCompat="@drawable/logo" />
 
     <TextView
@@ -25,10 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
         android:background="@color/black"
-
         android:padding="8dp"
-
         android:shadowColor="@android:color/black"
         android:shadowDx="1"
         android:shadowDy="1"
@@ -36,31 +51,17 @@
         android:text="#MohammedAbedAlkareem"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/airplane"
-        android:layout_width="413dp"
-        android:layout_height="192dp"
-        android:layout_marginEnd="204dp"
-        android:layout_marginBottom="244dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="295dp"
+        android:layout_height="224dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="197dp"
+        android:layout_marginBottom="256dp"
         app:srcCompat="@drawable/plane" />
-
-    <ImageView
-        android:id="@+id/dolphin"
-        android:layout_width="140dp"
-        android:layout_height="195dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="136dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/dolphin" />
-
-
 
     <TextView
         android:id="@+id/newsboxTextView"
@@ -75,15 +76,14 @@
         android:padding="16dp"
         android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        android:layout_alignParentBottom="true" />
 
     <TextView
         android:id="@+id/newsTextView"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:layout_marginBottom="24dp"
+        android:layout_above="@id/newsboxTextView"
+        android:layout_marginBottom="-89dp"
         android:background="@android:color/holo_red_dark"
         android:ellipsize="marquee"
         android:focusable="true"
@@ -93,8 +93,6 @@
         android:padding="16dp"
         android:text="ENCS 5141 - Android Lab"
         android:textColor="@color/white"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="34sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
